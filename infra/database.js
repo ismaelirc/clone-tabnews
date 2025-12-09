@@ -1,4 +1,3 @@
-import res from "express/lib/response";
 import { Client } from "pg";
 
 async function query(queryObject) {
