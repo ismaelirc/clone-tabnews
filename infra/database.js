@@ -16,6 +16,7 @@ async function query(queryObject) {
 }
 
 async function getNewClient() {
+  //comentario para deploy
   const useSSL = process.env.POSTGRES_SSL === "true";
 
   const client = new Client({
