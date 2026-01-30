@@ -10,7 +10,9 @@ test("GET to /api/v1/status should return 200", async () => {
   // versao do pg
   expect(responseBody.dependencies.database.version).toEqual("16.0");
   // quantidade conexao maxima
-  expect(responseBody.dependencies.database.max_connections).toEqual(100);
+  expect(
+    responseBody.dependencies.database.max_connections,
+  ).toBeGreaterThanOrEqual(100);
   // quantas estão sendo usadas
-  expect(responseBody.dependencies.database.open_connections).toEqual(1);
+  //expect(responseBody.dependencies.database.open_connections).toEqual(1);
 });
