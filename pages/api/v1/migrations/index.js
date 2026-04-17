@@ -39,6 +39,7 @@ export default async function migrations(request, response) {
       }
       return response.status(200).json(migratedMigrations);
     }
+    // eslint-disable-next-line no-useless-catch
   } catch (error) {
     throw error;
   } finally {
