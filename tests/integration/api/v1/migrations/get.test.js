@@ -7,7 +7,7 @@ beforeAll(async () => {
 
 describe("GET /api/v1/migrations should return 200", () => {
   describe("Anonymus user", () => {
-    test("Runing pending migrations", async () => {
+    test("Retriving pending migrations", async () => {
       const response = await fetch("http://localhost:3000/api/v1/migrations");
 
       expect(response.status).toBe(200);
