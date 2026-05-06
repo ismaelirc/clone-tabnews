@@ -6,8 +6,8 @@ beforeAll(async () => {
 });
 
 describe("POST /api/v1/migrations should return 200", () => {
-  describe("Anonymus user", () => {
-    describe("Running pending migrations", () => {
+  describe("Running on anonymus user post", () => {
+    describe("Pending migrations post", () => {
       test("For the first time", async () => {
         const response1 = await fetch(
           "http://localhost:3000/api/v1/migrations",
@@ -24,7 +24,7 @@ describe("POST /api/v1/migrations should return 200", () => {
 
         expect(response1Body.length).toBeGreaterThan(0);
       });
-      test("For the first time", async () => {
+      test("For the second time", async () => {
         const response2 = await fetch(
           "http://localhost:3000/api/v1/migrations",
           {
