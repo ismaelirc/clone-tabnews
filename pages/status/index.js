@@ -1,7 +1,7 @@
 import useSWR from "swr";
 
 async function fetchApi() {
-  const response = await fetch("http://localhost:3000/api/v1/status");
+  const response = await fetch("api/v1/status");
   const responseBody = await response.json();
   return responseBody;
 }
