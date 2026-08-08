@@ -1,4 +1,3 @@
-import { up } from "infra/migrations/1766712347131_first-migration";
 import useSWR from "swr";
 
 async function fetchApi() {
@@ -35,7 +34,7 @@ function DatabaseSatus() {
   const { isLoading, data } = useSWR("status", fetchApi, {
     refreshInterval: 2000,
   });
-  console.log(data);
+
   let dataBaseInfo = "Carregando...";
 
   if (!isLoading && dataBaseInfo) {
